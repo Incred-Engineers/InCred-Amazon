@@ -69,6 +69,18 @@
   font-size: 16px;
   margin-left:50px;
 }
+/* input[type="text"]{
+    padding-left: -50px !important;
+} */
+/* input::-webkit-input-placeholder {
+    padding-left:20px; 
+}
+input::-moz-placeholder {
+    padding-left:20px; 
+} */
+/* input:-ms-input-placeholder { 
+    padding-left:-40px; 
+} */
 </style>
 
 <!-- Body Start -->
@@ -90,7 +102,7 @@
           <div class="col-md-5 col-sm-5">
            <div class="form contact" id="form1">
               <div class="group form-group">  
-                <input type="text" class="form-control required chc" id="name" placeholder="" name="name">
+                <input type="text" class="form-control required chc" id="name" placeholder="" name="name" >
                  <p id="contact_name" class="text-left2 pull-left form-txt"></p>
                  <span class="highlight"></span>
                  <span class="bar"></span>
@@ -132,8 +144,8 @@
                  <label>Pincode*</label>
               </div>
               <div class="form-group group"> 
+                <p class="loan-amo">Rs: <span id="demo"></span></p>
                 <input type="range" class="form-control required" id="loan_amount" step="100000" min="500000" max="5000000" value="500000" class="slider" >
-                <p class="loan-amo">Value: <span id="demo"></span></p>
                 <p id="number" class="text-left2 pull-left form-txt"></p>
                 <!-- <span class="highlight"></span>
                  <span class="bar"></span> -->

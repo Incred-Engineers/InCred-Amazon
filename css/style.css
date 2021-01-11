@@ -98,7 +98,7 @@ html {
     background: #fff;
     height: 470px;
     width: 350px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .form-container {
@@ -312,14 +312,15 @@ and (max-width: 1366px){
         background-color: #fffaed;
         background-image: linear-gradient(#fffaed , #ffe6d6);
         height: auto;
-        padding: 100px;
     }
     .form {
-        padding: 5%;
+        padding-top: 30px;
         background: #fff;
         height: 600px;
-        width: 380px;
-        margin-left: -50px;
+        width: 420px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .tab {
         overflow: hidden;
@@ -621,11 +622,10 @@ and (max-width: 1605px){
         padding: 100px;
     }
     .form {
-        padding: 8%;
         background: #fff;
         height: 620px;
         width: 400px;
-        margin-left: -50px;
+        padding-top: 30px;
     }
     .tab {
         overflow: hidden;
@@ -924,7 +924,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
             display: none;
             position: relative;
             width: 100%;
-            margin-left: 43px;
+            margin-left: 33px;
             margin-top: 40px;
         }
 }
@@ -946,11 +946,11 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
             padding: 100px;
         }
         .form {
-            padding: 5%;
+            padding-top: 30px;
             background: #fff;
             height: 700px;
-            width: 380px;
-            margin-left: -50px;
+            width: 450px;
+            border-radius : 10px;
         }
         .tab {
             overflow: hidden;
@@ -1034,13 +1034,14 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
     color: #ec407a;
 }
 .contact .form-group {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .contact .form-control {
     border-radius: 0;
     border: none;
     border-bottom: 1px solid #b9b9b9;
     box-shadow: none;
+    font-size: 18px;
 }
 .contact .btn-primary {
     background-color: #c4c4c4;
@@ -1272,7 +1273,7 @@ input:focus ~ .highlight {
     height: 60px!important;
     width: 60px!important;
     padding-top: 10px!important;
-    margin: -30px -160px 0px -160px;
+    margin: -30px -95px 0px -190px;
 }
 
 .author-testi {

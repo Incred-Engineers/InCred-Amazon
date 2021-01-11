@@ -131,7 +131,7 @@ if(performance.navigation.type == 2){
       validityIndex['amazon_id']=false;
     })
 
-    $("#Amazonseller").blur(function(){
+    $("#Amazonseller").keyup(function(){
       var name = document.querySelector('#name').value;
       if(name == ''){
         document.getElementById('Amazon_error').innerHTML = 'Please enter valid name.'
@@ -311,7 +311,7 @@ if(performance.navigation.type == 2){
 
 
 
-function validate(){
+function switchDiv(){
     let data = JSON.parse(localStorage.getItem('lead_data'));
     let response  = (data.response);
     let leadId = response.LEAD_ID;
@@ -340,7 +340,17 @@ function validate(){
           localStorage.setItem('userData',JSON.stringify(result.response))
           if(result.status){
             setTimeout(()=> {
-              window.location.href= 'submitted.html';
+              if (document.getElementById('form1')) {
+
+                if (document.getElementById('form1').style.display == 'none') {
+                    document.getElementById('thankyou').style.display = 'block';
+                    document.getElementById('thankyou').style.display = 'none';
+                }
+                else {
+                    document.getElementById('form1').style.display = 'none';
+                    document.getElementById('thankyou').style.display = 'block';
+                }
+            }
             },2000)
           }
           else{
