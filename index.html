@@ -459,6 +459,10 @@ var output = document.getElementById("demo") || null;
 
 
     output.innerHTML = slider && slider.value;
+    if(slider && (slider.value == 500000) ){
+      val = slider.value /100000 + 'Lakh'; 
+      output.innerHTML = val;
+    }
         slider.oninput = function () {
             if (this.value) {
                 val = (this.value / 100000) + 'Lakh';
