@@ -198,6 +198,10 @@ label {
 @media only screen   
 and (min-device-width : 768px)   
 and (max-device-width : 1024px){
+    #customer1{
+        margin-left:-100px;
+        width:400px;
+    }
     #customer1 .offer-box {
         font-size: 15px;
         padding: 75px 50px;
@@ -565,6 +569,10 @@ and (max-width: 1366px){
 @media only screen   
 and (min-device-width : 360px)   
 and (max-device-width : 640px){
+    #customer1{
+        width:400px;
+        margin-left:-80px;
+    }
     #customer1 .offer-box {
         font-size: 15px;
         padding: 75px 50px;
@@ -584,6 +592,7 @@ and (max-device-width : 640px){
         color: #000;
         margin-top: -20px;
         width: 200px;
+        margin-left:-50px;
     }
     .head{
         color: #000;
@@ -1104,11 +1113,15 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+    #customer1{
+        margin-left:-80px;
+        width:400px;
+    }
     #customer1 .offer-box {
         font-size: 15px;
         padding: 75px 50px;
-        width: 150px;
-        height: 120px;
+        width: 200px;
+        height: 300px;
         position: relative;
     }
     #customer1 .flot-img img{
