@@ -1036,7 +1036,10 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         margin-left: 40px;
     }
 }
- /* @media (min-width: 1200px){
+
+
+/* 
+ @media (min-width: 1200px){
         .logo {
     width: 20%;
     height: 80px;
