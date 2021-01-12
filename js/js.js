@@ -205,8 +205,11 @@ if(performance.navigation.type == 2){
                             validityIndex['pin_Code']=true;
                             enableButton();
                             enableMainButton();
+                            setTimeout(() => {
                               document.getElementById('pincode_1').innerHTML = '';
-                              document.getElementById('pincode_1').style.color = 'green';
+                            },2000)
+                            document.getElementById('pincode_1').innerHTML = 'Pincode verified successfully';
+                            document.getElementById('pincode_1').style.color = 'green';
                               return true;
                           }
                       });
@@ -233,6 +236,9 @@ if(performance.navigation.type == 2){
         {
             document.getElementById('mobile_number').innerHTML = 'Please enter valid mobile number.';
             document.getElementById('mobile_number').style.color = 'red';
+            let mobilelabel = document.getElementById('mobliediv');
+            let closemoblie = mobilelabel.setAttribute('class','disableLabel');
+            document.getElementById('otpSent').style.display = 'none';
             // document.getElementById('mobile_number').style.color = 'red'
             otpIndex['phone']=false;
             enableMainButton();
@@ -240,6 +246,7 @@ if(performance.navigation.type == 2){
         } else{
           document.getElementById('mobile_number').innerHTML = '';
           document.getElementById('mobile_number').style.color = 'green';
+          document.getElementById('otpSent').style.display = 'none';
           // document.getElementById('send_Button').style.backgroundColor = '#f9a234';
           otpIndex['phone']=true;
           var mobile= true;
@@ -263,6 +270,8 @@ if(performance.navigation.type == 2){
         {
             document.getElementById('email_id').innerHTML = 'Please enter valid email ID.';
             document.getElementById('email_id').style.color = 'red';
+            let mobilelabel = document.getElementById('emailId');
+            let closemoblie = mobilelabel.setAttribute('class','disableLabel');
             validityIndex['email']=false;
             enableButton();
             enableMainButton();
@@ -394,8 +403,8 @@ $('#otp').keyup(function (){
                                     document.getElementById('pincode_1').disabled = false;
                                     document.getElementById('loan_amount').disabled = false;
                                     document.getElementById('Amazonseller').disabled = false;
-                                    document.getElementById('valid_otp').style.display = 'none';
                                     document.getElementById('otp_verifying').style.display= 'none';
+                                    document.getElementById('vaild_otp').innerHTML = 'Entered Valid OTP';
                                     window.timerId = 0;
                                     document.getElementById('some_div').style.display = 'none';
                                     let mobilelabel = document.getElementById('mobliediv');
@@ -414,6 +423,7 @@ $('#otp').keyup(function (){
                                   validityIndex['otp']=false;
                                   enableButton(); 
                                   document.getElementById('otp_verifying').style.display= 'none';
+                                  document.getElementById('valid_otp').innerHTML = 'Incorrect OTP';
                                   document.getElementById('valid_otp').style.display = 'block';
                                   document.getElementById('valid_otp').style.color = 'red';
                                   document.getElementById('some_div').style.display = 'none';
@@ -483,11 +493,12 @@ function timer(){
       if (timeLeft == -1) {
         clearTimeout( window.timerId);
       } else {
-        elem.innerHTML = 'Resend OTP in'+ timeLeft ;
+        elem.innerHTML = 'Resend OTP in'+ ' '+ timeLeft ;
         timeLeft--;
         if(timeLeft == 0){
           document.getElementById('resendOtp').style.display = 'none';
           document.getElementById('some_div').style.display = 'none';
+          document.getElementById('send_Button').style.display = 'inline-block';
           window.timerId = 0;
           // document.getElementById('resend_Button').style.display = 'block';
         }
