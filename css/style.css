@@ -92,7 +92,7 @@ html {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.navbar-fixed-top { top:0px; position:sticky; }
+.navbar-fixed-top {top:0px;position:sticky;height: 70px;}
 .form {
     padding: 2%;
     background: #fff;
@@ -198,6 +198,33 @@ label {
 @media only screen   
 and (min-device-width : 768px)   
 and (max-device-width : 1024px){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 500px;
+        position: relative;
+        margin-left: 200px;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -50px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 320px;
+        margin-left: -130px;
+        text-align: center;
+    }
+    .testi-name{
+        margin-left: -20px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -300,6 +327,33 @@ and (max-device-width : 1024px){
 @media only screen   
 and (min-width: 1030px)   
 and (max-width: 1366px){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 500px;
+        position: relative;
+        margin-left: 200px;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -50px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 320px;
+        margin-left: -130px;
+        text-align: center;
+    }
+    .testi-name{
+        margin-left: -20px;
+    }
     .head{
         color: #4f4e4e;
         font-size: 20px;
@@ -390,6 +444,26 @@ and (max-width: 1366px){
     }
 }
 @media only screen and (max-device-width: 480px) and (min-device-width: 320px){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 120px;
+        position: relative;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -52px;
+        width: 150px;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 200px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -491,6 +565,26 @@ and (max-width: 1366px){
 @media only screen   
 and (min-device-width : 360px)   
 and (max-device-width : 640px){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 120px;
+        position: relative;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -52px;
+        width: 150px;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 200px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -609,6 +703,33 @@ and (max-device-width : 640px){
 @media only screen   
 and (min-width: 1370px)  
 and (max-width: 1605px){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 500px;
+        position: relative;
+        margin-left: 200px;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -50px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 320px;
+        margin-left: -130px;
+        text-align: center;
+    }
+    .testi-name{
+        margin-left: -20px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -715,6 +836,29 @@ and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 1)  
 and (min-device-width : 768px)   
 and (max-device-width : 1007px){
+    .testi-name{
+        margin-left: -20px;
+    }
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 120px;
+        position: relative;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -52px;
+        width: 150px;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 200px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -816,6 +960,26 @@ and (max-device-width : 1007px){
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
 and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 120px;
+        position: relative;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -52px;
+        width: 150px;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 200px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -907,6 +1071,8 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
     }
 }
 @media (min-width: 992px){
+    
+    
     .tab {
         overflow: hidden;
         color: #646464;
@@ -938,6 +1104,26 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 120px;
+        position: relative;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -52px;
+        width: 150px;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 200px;
+    }
     .head{
         color: #000;
         font-size: 20px;
@@ -1036,13 +1222,37 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         margin-left: 40px;
     }
 }
-@media (min-width:1281px) {
+ @media (min-width:1281px) {
+    #customer1 .offer-box {
+        font-size: 15px;
+        padding: 75px 50px;
+        width: 150px;
+        height: 500px;
+        position: relative;
+        margin-left: 200px;
+    }
+    #customer1 .flot-img img{
+        position: relative;
+        top: -75px;
+        height: 150px;
+        margin-left: -50px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .offer-box p {
+        font-size: 16px;
+        color: #000;
+        margin-top: -20px;
+        width: 320px;
+        margin-left: -130px;
+        text-align: center;
+    }
         .logo {
     width: 20%;
     height: 80px;
     padding: 20px;
-    margin-left: 680px;
-        }
+    margin-left: 620px;
+    }
         .head{
             color: #4f4e4e;
             font-size: 20px;
@@ -1129,7 +1339,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         width: 100%;
         margin-left: 40px;
     }
-} 
+}  
 
 .text{
     color: #000;
@@ -1360,7 +1570,7 @@ input:focus ~ .highlight {
     background-color: #c4c4c4 ;
     border: none;
 }
-
+/* 
 #customer1 .offer-box {
     background: #fff;
     font-size: 15px;
@@ -1376,16 +1586,17 @@ input:focus ~ .highlight {
     height: 150px;
     margin-left: -52px;
     width: 150px;
-}
+}*/
 #customer1 .owl-theme .owl-controls .owl-buttons div {
     height: 40px!important;
     width: 40px!important;
     padding-top: 1px!important;
-    margin: -30px -95px 0px -150px;
-}
+    margin: -30px 0px 0px -50px;
+} 
 
 .author-testi {
     margin-top: 30px;
+    width: 400px;
 }
 /* .owl-carousel {
     display: none;
@@ -1404,7 +1615,7 @@ input:focus ~ .highlight {
     background: #e0c5b3;
 }
 .loan-amo{
-    color: black;
+    color: #646464;
     margin-left: 5px;
 }
 .owl-wrapper {
@@ -1507,3 +1718,10 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background:#a1cbf1;
   }
+  .testi-name {
+    color: #F47920;
+    width: 400px;
+}
+.author-testi a{
+    text-decoration: none;
+}
