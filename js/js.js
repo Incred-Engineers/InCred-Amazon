@@ -9,8 +9,7 @@ let validityIndex ={
     'email' : false,
     'pin_Code':false,
     'loan_amount':true,
-    'amazon_id':false,
-    'otp':false,
+    'otp':false
         // 'check' : false
 }
 let enableButton=function(){
@@ -127,33 +126,34 @@ if(performance.navigation.type == 2){
       }
     });
 
-    $('#send_Button').keyup(function(){
-      validityIndex['amazon_id']=false;
-    })
+    // $('#send_Button').keyup(function(){
+    //   validityIndex['amazon_id']=false;
+    // })
 
     $("#Amazonseller").keyup(function(){
       var name = document.querySelector('#name').value;
       if(name == ''){
         document.getElementById('Amazon_error').innerHTML = 'Please enter valid name.'
         document.getElementById('Amazon_error').style.color = 'red';
-        validityIndex['amazon_id']=false;
+         enableButton();
+          enableMainButton();
+        // validityIndex['amazon_id']=false;
       }
       else if (!name.match(/^[a-zA-Z ]*$/))
       {
           document.getElementById('Amazon_error').innerHTML = 'Please enter valid name.'
           document.getElementById('Amazon_error').style.color = 'red';
           document.getElementById('verify_via1').style.display = 'block';
-          // document.getElementById('contact_name').style.color = 'red';
-        validityIndex['amazon_id']=false;
-          enableButton();
-          enableMainButton();
+        // validityIndex['amazon_id']=false;
+          // enableButton();
+          // enableMainButton();
           return false;
       } else{
         document.getElementById('Amazon_error').innerHTML = '';
         document.getElementById('Amazon_error').style.color = 'green';
-        validityIndex['amazon_id']=true;
-          enableButton();
-          enableMainButton();
+        // validityIndex['amazon_id']=true;
+          // enableButton();
+          // enableMainButton();
         return true;
     }
   });
@@ -205,8 +205,11 @@ if(performance.navigation.type == 2){
                             validityIndex['pin_Code']=true;
                             enableButton();
                             enableMainButton();
+                            setTimeout(() => {
                               document.getElementById('pincode_1').innerHTML = '';
-                              document.getElementById('pincode_1').style.color = 'green';
+                            },2000)
+                            document.getElementById('pincode_1').innerHTML = 'Pincode verified successfully';
+                            document.getElementById('pincode_1').style.color = 'green';
                               return true;
                           }
                       });
@@ -233,6 +236,9 @@ if(performance.navigation.type == 2){
         {
             document.getElementById('mobile_number').innerHTML = 'Please enter valid mobile number.';
             document.getElementById('mobile_number').style.color = 'red';
+            let mobilelabel = document.getElementById('mobliediv');
+            let closemoblie = mobilelabel.setAttribute('class','disableLabel');
+            document.getElementById('otpSent').style.display = 'none';
             // document.getElementById('mobile_number').style.color = 'red'
             otpIndex['phone']=false;
             enableMainButton();
@@ -240,6 +246,7 @@ if(performance.navigation.type == 2){
         } else{
           document.getElementById('mobile_number').innerHTML = '';
           document.getElementById('mobile_number').style.color = 'green';
+          document.getElementById('otpSent').style.display = 'none';
           // document.getElementById('send_Button').style.backgroundColor = '#f9a234';
           otpIndex['phone']=true;
           var mobile= true;
@@ -263,6 +270,8 @@ if(performance.navigation.type == 2){
         {
             document.getElementById('email_id').innerHTML = 'Please enter valid email ID.';
             document.getElementById('email_id').style.color = 'red';
+            let mobilelabel = document.getElementById('emailId');
+            let closemoblie = mobilelabel.setAttribute('class','disableLabel');
             validityIndex['email']=false;
             enableButton();
             enableMainButton();
@@ -279,37 +288,6 @@ if(performance.navigation.type == 2){
     });
 
    
-
-    $(".chc").on('input',function (){
-
-    if(email && mobile && name && loanAmount && restaurant_name && pincode ){
-        document.getElementById('applynow').disabled  = false;
-
-    }else{
-      document.getElementById('applynow').disabled  = true;
-
-    }
-  })
-  
- 
-
-  // $(document).ready(function(){
-  //   $("#otp").keyup(function(){
-  //       var otp = document.querySelector('#otp').value;
-
-  //       if (!otp.match(/^[1-9]{6}$/))                               
-  //   { 
-  //           document.getElementById('otp_value').innerHTML = 'Please enter valid OTP.'
-            
-  //           return false;
-  //       } else{
-  //         document.getElementById('otp_value').innerHTML = '';
-  //         return true;
-  //     }
-  //   });
-  // });
-
-
 
 function switchDiv(){
     let data = JSON.parse(localStorage.getItem('lead_data'));
@@ -394,8 +372,13 @@ $('#otp').keyup(function (){
                                     document.getElementById('pincode_1').disabled = false;
                                     document.getElementById('loan_amount').disabled = false;
                                     document.getElementById('Amazonseller').disabled = false;
-                                    document.getElementById('valid_otp').style.display = 'none';
                                     document.getElementById('otp_verifying').style.display= 'none';
+                                    setTimeout(()=>{
+                                      document.getElementById('valid_otp').innerHTML = '';
+                                    },3000)
+                                    document.getElementById('valid_otp').innerHTML = 'Entered Valid OTP';
+                                    document.getElementById('valid_otp').style.display = 'block';
+                                    document.getElementById('valid_otp').style.color = 'green';
                                     window.timerId = 0;
                                     document.getElementById('some_div').style.display = 'none';
                                     let mobilelabel = document.getElementById('mobliediv');
@@ -414,12 +397,12 @@ $('#otp').keyup(function (){
                                   validityIndex['otp']=false;
                                   enableButton(); 
                                   document.getElementById('otp_verifying').style.display= 'none';
+                                  document.getElementById('valid_otp').innerHTML = 'Incorrect OTP';
                                   document.getElementById('valid_otp').style.display = 'block';
                                   document.getElementById('valid_otp').style.color = 'red';
                                   document.getElementById('some_div').style.display = 'none';
                                   document.getElementById('otpSent').style.display = 'none';
                                   window.timerId = 0;
-                                  document.getElementById('send_Button').disabled = 
                                   document.getElementById('send_Button').style.display = 'inline';
                                    
                                 }
@@ -483,11 +466,12 @@ function timer(){
       if (timeLeft == -1) {
         clearTimeout( window.timerId);
       } else {
-        elem.innerHTML = 'Resend OTP in'+ timeLeft ;
+        elem.innerHTML = 'Resend OTP in'+ ' '+ timeLeft ;
         timeLeft--;
         if(timeLeft == 0){
           document.getElementById('resendOtp').style.display = 'none';
           document.getElementById('some_div').style.display = 'none';
+          document.getElementById('send_Button').style.display = 'inline-block';
           window.timerId = 0;
           // document.getElementById('resend_Button').style.display = 'block';
         }

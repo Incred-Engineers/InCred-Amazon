@@ -67,8 +67,9 @@
 .timer{
   color: #f27c21;
   font-size: 16px;
-  margin-left:50px;
+  float:right;
 }
+
 /* input[type="text"]{
     padding-left: -50px !important;
 } */
@@ -122,11 +123,11 @@ input::-moz-placeholder {
                 <p id="otpSent"><i  class="fa fa-check-circle" aria-hidden="true" style="color:green"> &nbsp;&nbsp;OTP Sent</i></p>
               </div>
               <div class="group form-group" id="otpdiv">      
-                <input type="number" class="form-control required chc" id="otp" placeholder="" name="otp"  >
+                <input type="text" pattern="\d*" maxlength="4"class="form-control required chc" id="otp" placeholder="" name="otp" >
                 <span class="highlight"></span>
                  <span class="bar"></span>
                  <p id="otp_verifying" ><i class="fa fa-circle-o-notch" style="width: 11px; height: 11px;"></i>&nbsp;&nbsp;Verifying OTP</p> 
-                 <p id="valid_otp">Incorrect OTP</p>
+                 <p id="valid_otp"></p>
                  <label>Verify OTP* </label>
               </div>
               <div class="group form-group">      
@@ -134,7 +135,7 @@ input::-moz-placeholder {
                 <p id="email_id"  class="text-left2 pull-left form-txt"></p>
                 <span class="highlight"></span>
                  <span class="bar"></span>
-                 <label>Email*</label>
+                 <label id="emailId">Email*</label>
               </div>
               <div class="form-group group">
                 <input type="text" maxlength="6" class="form-control" id="pin_Code" placeholder="" name="pincode" >
