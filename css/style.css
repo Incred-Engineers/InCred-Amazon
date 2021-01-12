@@ -99,6 +99,8 @@ html {
     height: 470px;
     width: 350px;
     /* margin-left: 20px; */
+    box-shadow: 13px 10px 5px #CCC;
+    border-radius: 10px;
 }
 
 .form-container {
@@ -628,6 +630,8 @@ and (max-width: 1605px){
         height: 700px;
         width: 400px;
         padding-top: 30px;
+        box-shadow: 13px 10px 5px #CCC;
+        border-radius: 10px;
     }
     .tab {
         overflow: hidden;
