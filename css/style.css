@@ -99,8 +99,8 @@ html {
     height: 470px;
     width: 350px;
     /* margin-left: 20px; */
-    box-shadow: 13px 10px 5px #CCC;
-    border-radius: 10px;
+    border-radius: 8px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-container {
@@ -630,8 +630,8 @@ and (max-width: 1605px){
         height: 700px;
         width: 400px;
         padding-top: 30px;
-        box-shadow: 13px 10px 5px #CCC;
-        border-radius: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
     }
     .tab {
         overflow: hidden;
@@ -1036,7 +1036,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         margin-left: 40px;
     }
 }
- /* @media (min-width: 1200px){
+@media (min-width:1281px) {
         .logo {
     width: 20%;
     height: 80px;
@@ -1129,7 +1129,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         width: 100%;
         margin-left: 40px;
     }
-} */
+} 
 
 .text{
     color: #000;
