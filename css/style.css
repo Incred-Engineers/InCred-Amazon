@@ -332,6 +332,19 @@ and (max-device-width : 1024px){
 @media only screen   
 and (min-width: 1030px)   
 and (max-width: 1366px){
+    .line{
+    
+border-left: 1px solid #f58220;
+    
+height: 500px;
+    
+position: absolute;
+    
+left: 40%;
+    
+top: 145px;
+    
+}
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
@@ -736,6 +749,7 @@ and (max-device-width : 640px){
 @media only screen   
 and (min-width: 1370px)  
 and (max-width: 1605px){
+    
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
@@ -851,18 +865,17 @@ and (max-width: 1605px){
     }
     .line{
     
-        border-left: 1px solid #f58220;
-            
-        height: 500px;
-            
-        position: absolute;
-            
-        left: 40%;
-            
-        margin-left: -3px;
-            
-        top: 245px;
-        }
+border-left: 1px solid #f58220;
+    
+height: 500px;
+    
+position: absolute;
+    
+left: 45%;
+    
+top: 245px;
+    
+}
         .owl-carousel {
             display: none;
             position: relative;
@@ -1120,21 +1133,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         color: #646464;
         margin-left: 60px;
     }
-    .line{
-    
-border-left: 1px solid #f58220;
-    
-height: 500px;
-    
-position: absolute;
-    
-left: 40%;
-    
-margin-left: 40px;
-    
-top: 245px;
-    
-}
         .owl-carousel {
             display: none;
             position: relative;
@@ -1271,6 +1269,20 @@ top: 245px;
     }
 }
  @media (min-width:1281px) {
+    .line{
+    
+        border-left: 1px solid #f58220;
+            
+        height: 500px;
+            
+        position: absolute;
+            
+        left: 40%;
+            
+        margin-left: -3px;
+            
+        top: 245px;
+        }
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
