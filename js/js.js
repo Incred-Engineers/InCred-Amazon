@@ -379,8 +379,7 @@ $('#otp').keyup(function (){
                                     document.getElementById('valid_otp').innerHTML = 'Entered Valid OTP';
                                     document.getElementById('valid_otp').style.display = 'block';
                                     document.getElementById('valid_otp').style.color = 'green';
-                                    window.timerId = 0;
-                                    document.getElementById('some_div').style.display = 'none';
+                                    timer(0);
                                     let mobilelabel = document.getElementById('mobliediv');
                                     let closemoblie = mobilelabel.setAttribute('class','disableLabel');
                                     document.getElementById('otpSent').style.display = 'none';
@@ -400,10 +399,10 @@ $('#otp').keyup(function (){
                                   document.getElementById('valid_otp').innerHTML = 'Incorrect OTP';
                                   document.getElementById('valid_otp').style.display = 'block';
                                   document.getElementById('valid_otp').style.color = 'red';
-                                  document.getElementById('some_div').style.display = 'none';
+                                  timer(0);
                                   document.getElementById('otpSent').style.display = 'none';
-                                  window.timerId = 0;
                                   document.getElementById('send_Button').style.display = 'inline';
+                                  document.getElementById('send_Button').disabled = false;
                                    
                                 }
                               })
@@ -453,38 +452,46 @@ $('#otp').keyup(function (){
           document.getElementById('otpSent').style.display = 'block';
           document.getElementById('resendOtp').style.display = 'inline-block';
           localStorage.setItem('OTPDATA',JSON.stringify(result.response));
-          timer();
+          timer(30);
         });
 }
 
 // window.timerId = null;
-function timer(){
-   var timeLeft =30;
-    var elem = document.getElementById('some_div');
+function timer(data){
+   var timeLeft =data;
+   var elem = document.getElementById('some_div');
+   if(timeLeft == 0){
+    elem.innerHTML = '';
+    clearTimeout( window.timerId);
+    document.getElementById('some_div').style.display = 'none';
+   }else{
     window.timerId = setInterval(countdown, 1000);
     function countdown() {
       if (timeLeft == -1) {
         clearTimeout( window.timerId);
       } else {
-        elem.innerHTML = 'Resend OTP in'+ ' '+ timeLeft ;
-        timeLeft--;
+          var data  = timeLeft--;
+          if(data == -1 ){
+            timeLeft = 0
+            elem.innerHTML = '' ;
+          }
+          if(data != 0 && data != -1) {
+            document.getElementById('some_div').style.display = 'inline';
+            document.getElementById('some_div').style.marginTop = '-18px';
+            document.getElementById('resendOtp').style.display = 'none';
+            elem.innerHTML ='Resend OTP in'+ ' '+ timeLeft
+          }
         if(timeLeft == 0){
           document.getElementById('resendOtp').style.display = 'none';
           document.getElementById('some_div').style.display = 'none';
           document.getElementById('send_Button').style.display = 'inline-block';
-          window.timerId = 0;
+          timeLeft = 0;
           // document.getElementById('resend_Button').style.display = 'block';
         }
       }
     }
     
-}
-
-
-function closePopup(){
-  window.clearTimeout(window.timerId);
-  clearInterval(window.timerId);
-  $('#login').modal('hide');
+  }
 }
 
 function resendOtp(){
