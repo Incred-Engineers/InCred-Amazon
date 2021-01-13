@@ -96,11 +96,11 @@ html {
 .form {
     padding: 2%;
     background: #fff;
-    height: 470px;
+    height: auto;
     width: 350px;
     /* margin-left: 20px; */
     border-radius: 8px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-container {
@@ -247,7 +247,7 @@ and (max-device-width : 1024px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -382,7 +382,7 @@ and (max-width: 1366px){
     .form {
         padding-top: 30px;
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 420px;
         border-radius: 10px;
         margin-top: 30px;
@@ -508,7 +508,7 @@ and (max-width: 1366px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -642,7 +642,7 @@ and (max-device-width : 640px){
     .form {
         padding: 20%;
         background: #fff;
-        height: 650px;
+        height: auto;
         width: 360px;
         margin-left: -116px;
     }
@@ -786,7 +786,7 @@ and (max-width: 1605px){
     }
     .form {
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 400px;
         padding-top: 30px;
         border-radius: 8px;
@@ -917,7 +917,7 @@ and (max-device-width : 1007px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -1044,7 +1044,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -1200,7 +1200,7 @@ top: 245px;
     .form {
         padding: 15%;
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 400px;
         margin-left: -109px;
     }
@@ -1319,7 +1319,7 @@ top: 245px;
         .form {
             padding-top: 30px;
             background: #fff;
-            height: 700px;
+            height: auto;
             width: 450px;
             border-radius : 10px;
         }
@@ -1456,7 +1456,7 @@ input:focus ~ label, input:valid ~ label {
 }
 .bar:before, .bar:after {
     content: '';
-    height: 4px;
+    height: 2px;
     width: 0;
     bottom: 0px;
     position: absolute;
