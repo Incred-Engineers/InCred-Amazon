@@ -300,7 +300,8 @@ function switchDiv(){
         "LOAN_AMOUNT": document.querySelector('#loan_amount').value,
         "MOBILE":document.querySelector('#mobile').value,
         "NAME":document.querySelector('#name').value,
-        "EMAIL":document.querySelector('#email').value
+        "EMAIL":document.querySelector('#email').value,
+        "SELLER_ID" : document.querySelector('#Amazonseller').value || ''
     });
     $.ajax(url, {
         crossDomain: true,
