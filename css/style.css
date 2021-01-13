@@ -96,11 +96,11 @@ html {
 .form {
     padding: 2%;
     background: #fff;
-    height: 470px;
+    height: auto;
     width: 350px;
     /* margin-left: 20px; */
     border-radius: 8px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-container {
@@ -247,7 +247,7 @@ and (max-device-width : 1024px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -332,6 +332,19 @@ and (max-device-width : 1024px){
 @media only screen   
 and (min-width: 1030px)   
 and (max-width: 1366px){
+    .line{
+    
+border-left: 1px solid #f58220;
+    
+height: 500px;
+    
+position: absolute;
+    
+left: 40%;
+    
+top: 145px;
+    
+}
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
@@ -382,7 +395,7 @@ and (max-width: 1366px){
     .form {
         padding-top: 30px;
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 420px;
         border-radius: 10px;
         margin-top: 30px;
@@ -508,7 +521,7 @@ and (max-width: 1366px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -642,7 +655,7 @@ and (max-device-width : 640px){
     .form {
         padding: 20%;
         background: #fff;
-        height: 650px;
+        height: auto;
         width: 360px;
         margin-left: -116px;
     }
@@ -736,6 +749,7 @@ and (max-device-width : 640px){
 @media only screen   
 and (min-width: 1370px)  
 and (max-width: 1605px){
+    
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
@@ -786,7 +800,7 @@ and (max-width: 1605px){
     }
     .form {
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 400px;
         padding-top: 30px;
         border-radius: 8px;
@@ -851,18 +865,17 @@ and (max-width: 1605px){
     }
     .line{
     
-        border-left: 1px solid #f58220;
-            
-        height: 500px;
-            
-        position: absolute;
-            
-        left: 40%;
-            
-        margin-left: -3px;
-            
-        top: 245px;
-        }
+border-left: 1px solid #f58220;
+    
+height: 500px;
+    
+position: absolute;
+    
+left: 45%;
+    
+top: 245px;
+    
+}
         .owl-carousel {
             display: none;
             position: relative;
@@ -917,7 +930,7 @@ and (max-device-width : 1007px){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -1044,7 +1057,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
     .form {
         padding: 2%;
         background: #fff;
-        height: 470px;
+        height: auto;
         width: 400px;
         margin-left: 20px;
     }
@@ -1120,21 +1133,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71){
         color: #646464;
         margin-left: 60px;
     }
-    .line{
-    
-border-left: 1px solid #f58220;
-    
-height: 500px;
-    
-position: absolute;
-    
-left: 40%;
-    
-margin-left: 40px;
-    
-top: 245px;
-    
-}
         .owl-carousel {
             display: none;
             position: relative;
@@ -1200,7 +1198,7 @@ top: 245px;
     .form {
         padding: 15%;
         background: #fff;
-        height: 700px;
+        height: auto;
         width: 400px;
         margin-left: -109px;
     }
@@ -1271,6 +1269,20 @@ top: 245px;
     }
 }
  @media (min-width:1281px) {
+    .line{
+    
+        border-left: 1px solid #f58220;
+            
+        height: 500px;
+            
+        position: absolute;
+            
+        left: 40%;
+            
+        margin-left: -3px;
+            
+        top: 245px;
+        }
     .owl-theme .owl-controls {
         margin-top: 10px;
         text-align: center;
@@ -1319,7 +1331,7 @@ top: 245px;
         .form {
             padding-top: 30px;
             background: #fff;
-            height: 700px;
+            height: auto;
             width: 450px;
             border-radius : 10px;
         }
@@ -1456,7 +1468,7 @@ input:focus ~ label, input:valid ~ label {
 }
 .bar:before, .bar:after {
     content: '';
-    height: 4px;
+    height: 2px;
     width: 0;
     bottom: 0px;
     position: absolute;
