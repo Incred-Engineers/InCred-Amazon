@@ -133,7 +133,7 @@
               </div>
               <div class="form-group group"> 
                 <p class="loan-amo">Rs: <span id="demo"></span></p>
-                <input type="range" class="form-control required" id="loan_amount" step="100000" min="500000" max="5000000" value="500000" class="slider" >
+                <input type="range" class="form-control required" id="loan_amount" step="100000" min="100000" max="5000000" value="100000" class="slider" >
                 <p id="number" class="text-left2 pull-left form-txt"></p>
                 <!-- <span class="highlight"></span>
                  <span class="bar"></span> -->
@@ -445,7 +445,7 @@ var output = document.getElementById("demo") || null;
 
 
     output.innerHTML = slider && slider.value;
-    if(slider && (slider.value == 500000) ){
+    if(slider && (slider.value == 100000) ){
       val = slider.value /100000 + 'Lakh'; 
       output.innerHTML = val;
     }
